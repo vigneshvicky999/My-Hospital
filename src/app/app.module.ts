@@ -20,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { SpecialitiesComponent } from './specialities/specialities.component';
 import { AvailSpecialitiesComponent } from './avail-specialities/avail-specialities.component';
 import { TermsAndConditionComponent } from './terms-and-condition/terms-and-condition.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { TermsAndConditionComponent } from './terms-and-condition/terms-and-cond
     LoginComponent,
     SpecialitiesComponent,
     AvailSpecialitiesComponent,
-    TermsAndConditionComponent
+    TermsAndConditionComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,
