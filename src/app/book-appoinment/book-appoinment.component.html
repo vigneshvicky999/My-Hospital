@@ -1,0 +1,110 @@
+<div class="modal" #modal id="your-modal"  id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Book Appointment</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="appointmentForm">
+          <div class="row">
+            <div class="col-md-4">
+              <label class="label">Prefix
+                <span class="validation-star">*</span>
+              </label>
+              <select type="text" id="inputState" class="form-control" formControlName="prefix"
+                [ngClass]="{'is-invalid': submit && f.prefix.invalid}">
+                <div *ngIf="submit && f.prefix.invalid" class="invalid-feedback">
+                <div *ngIf="f.prefix.errors?.['required']" class="error">Choose any</div>
+              </div>
+                <option value="" disabled selected>Choose..</option>
+                <option *ngFor="let marital of maritals" [ngValue]="marital.id">{{ marital.name }}</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="label"> First Name
+                <span class="validation-star">*</span></label>
+              <input type="text" placeholder=" Name" class="form-control" formControlName="fname"
+                oninput="this.value = this.value.replace(/[^A-Z,a-z\s]/g, '')"
+                [ngClass]="{'is-invalid': submit && f.fname.invalid}">
+              <div *ngIf="submit && f.fname.invalid" class="invalid-feedback">
+                <div *ngIf="f.fname.errors?.['required']">Name is required</div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label class="label"> Last Name
+                <span class="validation-star">*</span></label>
+              <input type="text" placeholder=" Name" class="form-control" formControlName="lname"
+                oninput="this.value = this.value.replace(/[^A-Z,a-z\s]/g, '')"
+                [ngClass]="{'is-invalid': submit && f.lname.invalid}">
+              <div *ngIf="submit && f.lname.invalid" class="invalid-feedback">
+                <div *ngIf="f.lname.errors?.['required']">Last Name is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label class="label">Age
+                <span class="validation-star">*</span>
+              </label>
+              <input type="text" class="form-control" placeholder="Age" formControlName="age" min="1" 
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                [ngClass]="{'is-invalid': submit && f.age.invalid}">
+              <div *ngIf="submit && f.age.invalid" class="invalid-feedback">
+                <div *ngIf="f.age.errors?.['required']">Age is required</div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="label">Phone
+                <span class="validation-star">*</span></label>
+              <input type="tel" placeholder="Phone" class="form-control" formControlName="phone" max="10"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                [ngClass]="{'is-invalid': submit && f.phone.invalid}">
+              <div *ngIf="submit && f.phone.invalid" class="invalid-feedback">
+                <div *ngIf="f.phone.errors?.['required']">Phone is required</div>
+                <div *ngIf="f.phone.errors?.['pattern']">Invalid phone number</div>
+              </div>
+            </div>
+          </div>
+          <label class="label">Address
+            <span class="validation-star">*</span>
+          </label> 
+          <input type="text" class="form-control" placeholder="Address" formControlName="address"
+            [ngClass]="{'is-invalid': submit && f.address.invalid}">
+          <div *ngIf="submit && f.address.invalid" class="invalid-feedback">
+            <div *ngIf="f.address.errors?.['required']">Address is required</div>
+          </div>
+
+          <label class="label">Email
+            <span class="validation-star">*</span></label>
+          <input type="email" placeholder="Email" class="form-control" formControlName="email"
+            [ngClass]="{'is-invalid': submit && f.email.invalid}">
+          <div *ngIf="submit && f.email.invalid" class="invalid-feedback">
+            <div *ngIf="f.email.errors?.['required']">Email is required</div>
+            <div *ngIf="f.email.errors?.['pattern']">Invalid email id</div>
+          </div>
+
+          <label class="label">What services are you interested in?
+            <span class="validation-star">*</span>
+          </label>
+
+          <textarea class="form-control" formControlName="message" minlength="10" maxlength="200"
+            placeholder="Leave your message here" row="3" cols="50"
+            [ngClass]="{'is-invalid': submit && f.message.invalid}"></textarea>
+          <div *ngIf="submit && f.email.invalid" class="invalid-feedback">
+            <div *ngIf="f.message.errors?.['required']">Message is required.</div>
+            <div *ngIf="f.message.errors?.['minlength']">Minimum 10 letter is required.</div>
+          </div>
+          <div class="modal-footer">
+            <button type="close" id="modalCancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
+            <button *ngIf="!processing" type="submit" [disabled]="appointmentForm.invalid" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+            <div *ngIf="processing">Submitting</div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

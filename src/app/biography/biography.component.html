@@ -1,0 +1,49 @@
+<!-- <div class="container d-flex">
+    <div class="row" *ngIf="value=='edwin'">
+   <div class="col-sm-12 col-md-6 col-lg-4 d-flex mt-4">
+    <img src="../../assets/Images/doctor.jpg" class="edwin" alt="Edwin">
+   </div> 
+   <div class="col-sm-12 col-md-6 col-lg-5 my-2 mt-4">
+    <h2><b>Dr.Edwin</b></h2>
+    <h3>Senior Consultant - Cardiology</h3>
+    <p>MBBS, DCH, MD, DNB, DM (Cardiology), DNB (Cardiology)</p>
+    <h5><b>Speciality</b></h5>
+    <p>Heart Specialist</p>
+    <h5><b>Languages</b></h5>
+    <p>English</p>
+</div>
+   <div class="col-sm-12 col-md-6 col-lg-3 buttons mt-4">
+    <a routerLink="#" class="btn btn-primary">Call now </a>&nbsp;
+    <button class="btn btn-primary" [disabled]="isButtonDisable"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Book Appointment</button> 
+    </div>
+   </div> 
+</div> -->
+
+<div class="container mt-2" #content>
+  <div class="row" *ngFor="let doctor of doctors">
+    <div class="col-md-4">
+      <img src={{doctor.url}} class="edwin" alt="Images">
+    </div>
+    <div class="col-md-4  body mt-3">
+      <h2><b>{{doctor.name}}</b></h2>
+      <h3>{{doctor.role_}}</h3>
+      <p>{{doctor.studies_}}</p>
+      <h5><b>{{doctor.header_}}</b></h5>
+      <p>{{doctor.specialist_}}</p>
+      <h5><b>{{doctor.langHeader_}}</b></h5>
+      <p>{{doctor.language_}}</p>
+    </div>
+    <div class="col-md-4 buttons mt-4">
+      <button routerLink="#" class="btn btn-primary">Call now <i class="fa fa-phone" aria-hidden="true"></i>
+      </button>&nbsp;
+      <button routerLink="#" [disabled]="isButtonDisable" class="btn btn-success" *ngIf="bookedBtn">Booked<i class="bi bi-calendar-check"></i></button>&nbsp;
+      <button class="btn btn-primary" [disabled]="isButtonDisable" *ngIf="bookingBtn" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop">Book Appointment <i class="fa fa-calendar" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="pdfContent">
+<a (click)="downloadPDF()"><img src="../../assets/Images/pdf.png" class="pdf" alt=""></a>
+</div>
+<app-book-appoinment (disableBioButtonEvent)="ondisable()"></app-book-appoinment>

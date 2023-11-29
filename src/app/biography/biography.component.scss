@@ -1,0 +1,43 @@
+.edwin{
+    width:70%;
+    height: 70%;
+    margin-left: 50px;
+    margin-top:20px;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+ 
+    .buttons{
+        margin-bottom: 200px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .body{
+        margin-top: -200px;
+        padding: -200px;
+    }
+   
+}
+.btn{
+    
+    margin-top: 20px;
+}
+
+.container{
+    box-shadow: 0px 0px 10px 0px;
+    box-sizing: border-box;
+}
+.pdf{
+    
+    width:30px;
+    height: 30px;
+    margin-top: 20px;
+}
+.pdfContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

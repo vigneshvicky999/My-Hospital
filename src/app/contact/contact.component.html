@@ -1,0 +1,61 @@
+<h3 class="head mb-2">Contact Us</h3>
+<div class="container-fluid mb-6">
+  <form [formGroup]="ContactForm">
+    <label class="label"> Name
+      <span class="validation-star">*</span></label>
+    <input type="text" placeholder=" Name" class="form-control" formControlName="name"
+      oninput="this.value = this.value.replace(/[^A-Z,a-z\s]/g, '')"
+      [ngClass]="{'is-invalid': submit && f.name.invalid}">
+    <div *ngIf="submit && f.name.invalid" class="invalid-feedback">
+      <div *ngIf="f.name.errors?.['required']">Name is required</div>
+    </div>
+    <label class="label">Date of Birth  
+      <span class="validation-star">*</span>
+    </label>
+    <input type="date" class="form-control" formControlName="date" [ngClass]="{'is-invalid': submit && f.date.invalid}">
+    <div *ngIf="submit && f.date.invalid" class="invalid-feedback">
+      <div *ngIf="f.date.errors?.['required']">Date of Birth is required</div>
+    </div>
+    <label class="label">Gender</label>&nbsp;<br>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" formControlName="gender" name="gender" value="male">
+      <label class="form-check-label" for="maleRadio">Male</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" formControlName="gender" name="gender" value="female">
+      <label class="form-check-label" for="femaleRadio">Female</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" formControlName="gender" name="gender" value="other">
+      <label class="form-check-label" for="otherRadio">Other</label>
+    </div><br>
+    <label class="label">Phone
+      <span class="validation-star">*</span></label>
+    <input type="tel" placeholder="Phone" class="form-control" formControlName="phone" maxlength="10"
+      oninput="this.value = this.value.replace(/[^0-9]/g, '')" [ngClass]="{'is-invalid': submit && f.phone.invalid}">
+    <div *ngIf="submit && f.phone.invalid" class="invalid-feedback">
+      <div *ngIf="f.phone.errors?.['required']">Phone is required</div>
+      <div *ngIf="f.phone.errors?.['pattern']">Invalid phone number</div>
+    </div>
+    <label class="label">Email
+      <span class="validation-star">*</span></label>
+    <input type="email" placeholder="Email" class="form-control" formControlName="email"
+      [ngClass]="{'is-invalid': submit && f.email.invalid}">
+    <div *ngIf="submit && f.email.invalid" class="invalid-feedback">
+      <div *ngIf="f.email.errors?.['required']">Email is required</div>
+      <div *ngIf="f.email.errors?.['pattern']">Invalid email id</div>
+    </div>
+    <label class="label">Message
+      <span class="validation-star">*</span>
+    </label>
+    <textarea class="form-control" formControlName="message" minlength="10" maxlength="200"
+      placeholder="Leave your message here" row="3" cols="50"
+      [ngClass]="{'is-invalid': submit && f.message.invalid}"></textarea>
+    <div *ngIf="submit && f.email.invalid" class="invalid-feedback">
+      <div *ngIf="f.message.errors?.['required']">Message is required.</div>
+      <div *ngIf="f.message.errors?.['minlength']">Minimum 10 letter is required.</div>
+    </div><br>
+    <button type="submit" (click)="onSubmit()" class="btn btn-success">Submit</button>&nbsp;
+    <button type="reset" class="btn btn-danger">Reset</button>
+  </form>
+</div>

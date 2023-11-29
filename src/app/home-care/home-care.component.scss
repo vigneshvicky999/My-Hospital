@@ -1,0 +1,37 @@
+.banner-image {
+    width:100%;
+    height: auto;
+    object-fit:cover;
+}
+.mail{
+    color:black;
+    text-decoration: none;
+}
+.registerButton  {
+   display: flex;
+   align-items: center;
+   justify-content: center  ;
+}
+.homeCareForm{
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px 0px;
+    background-image:url(../../assets/Images/register.jpg);
+    display: flex;
+    align-items: left;
+    justify-content: left  ;
+}
+@media screen and (max-width: 767px) {
+    .homeCareForm   {
+     width: 100%;
+     height:100%;
+     display: flex;
+     justify-content: center;
+    align-items: center;
+    }
+  }
+  .btn-success{
+    width:150px;
+  }
+  .error{
+    color: red;
+  }

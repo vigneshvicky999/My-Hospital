@@ -1,0 +1,78 @@
+.whatsapp {
+    color: green;
+
+}
+.contact{
+    color: white;
+}
+
+.fb {
+    color:rgb(34, 133, 239);
+    
+}
+
+.insta {
+    color: rgb(206, 108, 47)
+}
+
+.linkedin {
+    color: rgb(7, 79, 224);
+}
+
+.plus {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+
+}
+
+.nav-link{
+  color: white;
+}
+
+.head-content {
+    background-color: black;
+    margin:auto
+}
+@media screen and (max-width: 767px) {
+    .head-content {
+     font-size: small;
+    }
+  }
+
+.social-contact{
+    color: white;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    color: white;
+    background-color: white;
+    text-decoration: none;
+  }
+  .speciality{
+    width:20px;
+    height:20px;
+    padding:2px
+  }
+  // .profile a {
+  //   text-decoration: none;
+  //   margin: 6px;
+  //   color: black;
+  //   float:right;
+  // }        
+  .admin-panel .dropdown-toggle{
+    width:40px;
+    height:40px;
+    cursor: pointer;
+  }
+.admin-img{
+  float: right;
+ 
+}
+.admin-panel .dropdown-menu{
+  margin-left: -110px;
+}
+nav{
+  // background-color:Beige
+  background-color: rgba(179, 8, 8, 0.866)
+}

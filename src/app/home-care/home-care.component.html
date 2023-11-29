@@ -1,0 +1,161 @@
+<div class="care-header">
+    <div class="col-12 ">
+        <div class="Banner Banner-homecare">
+            <img src="../../assets/specialities/Banner.jpg" class="banner-image" alt="Banner">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="article mt-4">
+        <p>Our hospital as pioneers in the healthcare sector in India, brings its quality services to you, at your home
+            in the trying
+            times of the pandemic. With the Health at Home facility, we ensure your protection in the safe confines of
+            your
+            house, so that you do not have to step out for our services.</p>
+    </div>
+    <div class="container">
+        <div class="care-header">
+            <h2><b>Our Services</b></h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 ">
+                <div class="services">
+
+                    <div class="sub-header">
+                        <h4>Nursing Services</h4>
+                    </div>
+
+                    <ul class="unordered ">
+                        <li>Caring and dressing wounds</li>
+                        <li>Intravenous medication and IV fluid</li>
+                        <li>Ryles tube insertion</li>
+                        <li>Colostomy bag change</li>
+                    </ul>
+                </div>
+
+                <hr>
+                <div class="sub-header ">
+                    <h3>Medical Care at Home</h3>
+                    <ul class="unordered">
+                        <li>Doctor visit</li>
+                        <li>Post-surgery care</li>
+                    </ul>
+                    <hr>
+                </div>
+                <div class="sub-header">
+                    <h3>Dietary plan</h3>
+                    <ul class="unordered">
+                        <li>
+                            Dietitian plan</li>
+                        <li> Diet plan
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="sub-header">
+                    <h3>Doctor Visit</h3>
+                    <ul class="unordered">
+                        <li>Doctor vist at your home</li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-7 homeCareForm mb-2">
+                <div class="container mt-4">
+                    <h3 style="color: red;"><b>HEALTH AT HOME SERVICE</b></h3>
+                    <h5><b>Contact No</b></h5>
+                    <p>+91 9087345424</p>
+                    <h5><b>Email</b></h5>
+                    <a href="/" class="mail"> homecareservices@gmail.com</a>
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <div class="row mt-2">
+                            <div class="form-group col-md-6 ">
+                                <label for="inputName">Name</label>
+                                <input type="text" class="form-control" formControlName="name" id="inputName"
+                                    placeholder="Full Name" [ngClass]="{'is-invalid':submit && r.name.invalid}">
+
+                                <div *ngIf="submit && r.name.invalid" class="invalid-feedback">
+                                <div *ngIf="r.name.errors?.['required']" class="error">Name is required</div>
+                                <div *ngIf="r.name.errors?.['pattern']" class="error">Please enter only letters</div>
+                            </div>
+                        </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail">Email</label>
+                                <input type="email" class="form-control" formControlName="email" id="inputEmail"
+                                    placeholder="Email" [ngClass]="{'is-invalid':submit && r.email.invalid}">
+                                <div *ngIf="submit && r.email.invalid" class="invalid-feedback">
+                                <div *ngIf="r.email.errors?.['required']" class="error">Invalid Email Id</div>
+                                <div *ngIf="r.email.errors?.['pattern']" class="error">Invalid Email Id</div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">Address</label>
+                            <input type="text" class="form-control" formControlName="address1" id="inputAddress"
+                                placeholder="1234 Main St" [ngClass]="{'is-invalid':submit && r.address1.invalid}">
+                            <div *ngIf="submit && r.address1.invalid" class="invalid-feedback">
+                            <div *ngIf="r.address1.errors?.['required']" class="error">Enter your address</div>
+                        </div>
+                    </div>
+                        <div class="form-group">
+                            <label for="inputAddress2">Address 2</label>
+                            <input type="text" class="form-control" formControlName="address2" id="inputAddress2"
+                                placeholder="Apartment, studio, or floor"
+                                [ngClass]="{'is-invalid':submit && r.address2.invalid}">
+                            <div *ngIf="submit && r.address2.invalid" class="invalid-feedback">
+                            <div *ngIf="r.address2.errors?.['required']" class="error">Enter your address</div>
+                        </div>
+                    </div>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label for="inputCity">City</label>
+                                <input type="text" class="form-control" formControlName="city" id="inputCity"
+                                    [ngClass]="{'is-invalid':submit && r.city.invalid}">
+                                <div *ngIf="submit && r.city.invalid" class="invalid-feedback">
+                                <div *ngIf="r.city.errors?.['required']" class="error">Enter your city</div>
+                            </div>
+                        </div>
+
+                            <div class="form-group col-md-5 mt-0">
+                                <label for="inputState">State</label>
+                                <select type="text" id="inputState" class="form-control" formControlName="state"
+                                    [ngClass]="{'is-invalid': submit && r.state.invalid}">
+                                    <div *ngIf="submit && r.state.invalid" class="invalid-feedback">
+                                    <div *ngIf="r.state.errors?.['required']" class="error">Enter your state</div>
+                                </div>
+                                    <option value="" disabled selected>Choose..</option>
+                                    <option *ngFor="let state of states" [ngValue]="state.id">{{ state.name }}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputZip">Zip</label>
+                                <input type="text" class="form-control" formControlName="zip" id="inputZip"
+                                    maxlength="7" oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                                    [ngClass]="{'is-invalid':submit && r.zip.invalid}">
+                                <div *ngIf="submit && r.zip.invalid" class="invalid-feedback">
+                                <div *ngIf="r.zip.errors?.['required']" class="error">Zip code required</div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="form-group">
+                            <div class="form-check mt-1">
+                                <label class="form-check-label" for="gridCheck" style="color:black">Check me out</label>
+                                <input class="form-check-input" formControlName="gridCheck" type="checkbox"
+                                    id="gridCheck" [ngClass]="{'is-invalid':submit && r.gridCheck.invalid}">
+                                <div *ngIf="submit && r.gridCheck.invalid" class="invalid-feedback">
+                                <div *ngIf="r.gridCheck.errors?.['required']" class="error"></div>
+                              
+                            </div>
+                        </div>
+                        </div>
+                        <div class="registerButton mb-4">
+                            <button type="submit"
+                                class="btn btn-success">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

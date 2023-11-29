@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "img1": "../../assets/specialities/Banner-img.jpg",
+        "img2": "../../assets/specialities/cardiology.png",
+        "speciality_name": "Cardiology",
+        "bannerContent":"The Modern Health-Care Centre Heart Institute brings together a distinguished and experienced faculty with one of the most innovative and advanced cardiac care facilities in the country. The Department of Cardiology atModern-Health is anadvanced cardiac centre that caters to Diagnostic, Interventional, Therapeutic and Preventiveaspects of Cardiology.  It has Outpatient, Inpatient, and Cutting edge investigative and interventional facilities. There  are dedicated  subspecialty clinics that range from Heart Failure, Arrhythmias, Paediatric cardiology toCardiomyopathy. On the Interventional front the top-of-the-line cardiac interventional labs, ECMO, IVUS, 3D Electrophysiology recording systems complement the advanced Vivid based 3D echocardiography systems. A 24/7 emergency system that ensures Primary Angioplasty in Acute MI ensures patient services to completion."
+    },
+    {
+        "id":2,
+        "img1": "../../assets/specialities/Banner-img.jpg",
+        "img2":"../../assets/specialities/neurology.png",
+        "speciality_name": "Neurology",
+        "bannerContent":"The Modern Health-Care centre Department of Neurology is one of the best and busiest Neurology Centres in India. It has 6 full time Senior Consultants along with 24 hour Neurology Residents. We are equipped with our own comprehensive stroke unit and Neurology ICU with state of the art facilities."
+    },
+    {
+        "id":3,
+        "img1": "../../assets/specialities/Banner-img.jpg",
+        "img2": "../../assets/specialities/ortho.png",
+        "speciality_name": "Orthopedic",
+        "bannerContent":"Modern Health-Care centre is a specialized center with state-of-the-art facility that offers specialised services for comprehensive management of musculoskeletal disorders in adults and children.The department has an exceptional team of doctors comprising of top orthopaedic surgeons who have the experience and expertise to handle all orthopaedic emergencies and complex surgeries."
+    },
+    {
+        "id":4,
+        "img1": "../../assets/specialities/Banner-img.jpg",
+        "img2": "../../assets/specialities/cancer.png",
+        "speciality_name": "Oncology",
+        "bannerContent":"Cancer is not a single entity, but collection of a multitude of disease processes, unique in their sites of origin, rates of growth, patterns of spread and their final outcomes. Abnormal and uncontrolled growth is the only thing they all have in common."
+    },
+    {
+        "id":5,
+        "img1": "../../assets/specialities/Banner-img.jpg",
+        "img2": "../../assets/specialities/gestro.png",
+        "speciality_name": "Gasterenterology",
+        "bannerContent":"Modern Health-Care centre Gastroenetrology department is dedicated to the prevention ,diagnosis and management of digestive and hepatobiliary diseases with modern state of art equipment and advanced intensive care units for both adults and children. The human digestive system is made up of the gastrointestinal tract and hepato-biliary system, and is responsible for processing food and circulating the nutrition derived from it. The upper GI tract is comprised of the oesophagus (food-pipe), stomach and duodenum, while the large and small intestines and the anus, together, form the lower GI tract.The hepatobiliary system is essential for digestion and it includes liver,Pancreas ,bile ducts and gall bladder. The department offers expert comprehensive high end care for gastrointestinal dissorders and hepatobiliary diseases. Our Gastroenetrologist offers Comprehensive high end care for diseases such as colon polyps, gastrointestinal cancer, jaundice, cirrhosis of the liver, gastroesophageal reflux (heartburn), peptic ulcer disease, colitis, gallbladder and biliary tract disease, nutritional problems, Irritable Bowel Syndrome (IBS), pancreatitis, etc."
+    },
+    {
+        "id":6,
+        "img1": "../../assets/specialities/Banner-img.jpg",
+        "img2": "../../assets/specialities/gynecology.png",
+        "speciality_name": "Gyneocology",
+        "bannerContent":"Modern Health-Care centre Gynecology encompasses two different sub-specialities, including the pregnancy care, childbirth and the postpartum period that follows. Together, they fall under Obstetrics. While under Gynecology, we offer comprehensive healthcare for the female reproductive system. With doctors who are both experienced and compassionate, Modern Health-Care centre Gynecology is the most advanced centre for Mother and Baby."
+    }
+]

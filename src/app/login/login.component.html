@@ -1,0 +1,33 @@
+   <div class="wrapper  mt-4">
+    <div class="logo">
+        <img src="../../assets/Images/plus.jpg" alt="">
+    </div>
+    <div class="text-center mt-4 name">
+        Health-Care Centre
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmitForm()" class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+            <span class="bi bi-person"></span>
+            <input type="text" name="userName" id="userName" formControlName="userName" placeholder="User Name"
+                oninput="this.value = this.value.replace(/[^A-Z,a-z\s]/g, '')"
+                [ngClass]="{'is-invalid': submit && inputControls.userName.invalid}">
+            <div *ngIf="submit && inputControls.userName.invalid" class="invalid-feedback">
+                <div *ngIf="inputControls.userName.errors?.['required']">User Name is required</div>
+            </div>
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="bi bi-file-lock2"></span>
+            <input type="password" name="password" id="password" formControlName="password" placeholder="Password"
+            [ngClass]="{'is-invalid': submit && inputControls.password.invalid}">
+            <div *ngIf="submit && inputControls.password.invalid" class="invalid-feedback">
+                <div *ngIf="inputControls.password.errors?.['required']">Password is required</div>
+
+            </div> 
+        </div>
+        <button type="submit" class="btn mt-3">Login</button>
+    </form>
+    <div class="text-center fs-6">
+        <p>Don't have an account ?</p> <a routerLink="/register">Create account</a>
+    </div>
+</div>
+

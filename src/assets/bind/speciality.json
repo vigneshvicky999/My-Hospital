@@ -1,0 +1,31 @@
+[{
+    "id":1,
+    "img":"../../assets/specialities/cardiology.png",
+    "name":"Cardiology"
+},
+{
+    "id":2,
+    "img":"../../assets/specialities/neurology.png",
+    "name":"Neurology"
+},
+{
+    "id":3,
+    "img":"../../assets/specialities/ortho.png",
+    "name":"Orthopedics"
+},
+{
+    "id":4,
+    "img":"../../assets/specialities/cancer.png",
+    "name":"Cancer-care"
+},
+{
+    "id":5,
+    "img":"../../assets/specialities/gestro.png",
+    "name":"Gasteroenterology"
+},
+{
+    "id":6,
+    "img":"../../assets/specialities/gynecology.png",
+    "name":"Gyneocology"
+}
+]

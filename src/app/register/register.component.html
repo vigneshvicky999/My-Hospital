@@ -1,0 +1,70 @@
+<div class="wrapper mt-2">
+    <div class="logo">
+        <img src="../../assets/Images/plus.jpg" alt="">
+    </div>
+    <div class="text-center mt-4 name">
+        Health-Care Centre
+    </div>
+    <form [formGroup]="registerForm" class="p-3 mt-3">
+        <div class="row">
+            <div class="col-4 form-field d-flex align-items-center">
+                <span class="bi bi-person"></span>
+                <input type="text" name="name" id="name" formControlName="name_" placeholder="Full Name"
+                    oninput="this.value = this.value.replace(/[^A-Z,a-z\s]/g, '')"
+                    [ngClass]="{'is-invalid': submit && inputControls.name_.invalid}">
+                <div *ngIf="submit && inputControls.name_.invalid" class="invalid-feedback">
+                    <div *ngIf="inputControls.name_.errors?.['required']">Name is required</div>
+                </div>
+            </div>
+            <div class="col-4 form-field d-flex align-items-center">
+                <span class="bi bi-person"></span>
+                <input type="text" name="uName" id="uName" formControlName="userName" placeholder="User Name"
+                    oninput="this.value = this.value.replace(/[^A-Z,a-z\s]/g, '')"
+                    [ngClass]="{'is-invalid': submit && inputControls.userName.invalid}">
+                <div *ngIf="submit && inputControls.userName.invalid" class="invalid-feedback">
+                    <div *ngIf="inputControls.userName.errors?.['required']">User Name is required</div>
+                </div>
+            </div>
+            <div class="col-4 form-field d-flex align-items-center">
+                <span class="bi bi-person"></span>
+                <input type="date" name="dob" id="dob" formControlName="dob" placeholder="Date of Birth"
+                    [ngClass]="{'is-invalid': submit && inputControls.dob.invalid}">
+                <div *ngIf="submit && inputControls.dob.invalid" class="invalid-feedback">
+                    <div *ngIf="inputControls.dob.errors?.['required']">DOB is required</div>
+                </div>
+            </div>
+            <div class="col-4 form-field d-flex align-items-center">
+                <span class="bi bi-envelope-at"></span>
+                <input type="email" name="" id="email" formControlName="email_" placeholder="Email"
+                    [ngClass]="{'is-invalid': submit && inputControls.email_.invalid}">
+                <div *ngIf="submit && inputControls.email_.invalid" class="invalid-feedback">
+                    <div *ngIf="inputControls.email_.errors?.['required']">Email is required</div>
+                    <div *ngIf="inputControls.email_.errors?.['pattern']">Invalid email id</div>
+                </div>
+            </div>
+            <div class="col-4 form-field d-flex align-items-center">
+                <span class="bi bi-file-lock2"></span>
+                <input type="password" name="password" id="pass" formControlName="password" placeholder="Password"
+                    [ngClass]="{'is-invalid': submit && inputControls.password.invalid}">
+                <div *ngIf="submit && inputControls.password.invalid" class="invalid-feedback">
+                    <div *ngIf="inputControls.password.errors?.['required']">password is required</div>
+                    <div *ngIf="inputControls.password.errors?.['pattern']">Invalid password</div>
+                </div> 
+            </div>
+
+            <div class="col-4 form-field d-flex align-items-center">
+                <span class="bi bi-phone"></span>
+                <input type="text" name="mobile" id="mobile" formControlName="mobile" placeholder="Mobile No" max="10"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    [ngClass]="{'is-invalid': submit && inputControls.mobile.invalid}">
+                <div *ngIf="submit && inputControls.mobile.invalid" class="invalid-feedback">
+                    <div *ngIf="inputControls.mobile.errors?.['required']">Phone is required</div>
+                    <div *ngIf="inputControls.mobile.errors?.['pattern']">Invalid phone number</div>
+                </div>
+            </div>
+            <div class="clickable">
+                <button type="submit" (click)="onRegisterSubmitForm()" class="btn mt-3">Sign in</button>
+            </div>
+           <a routerLink="/"><p>Already have an account!</p></a> 
+        </div>
+    </form>

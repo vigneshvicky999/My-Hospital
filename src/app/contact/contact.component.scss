@@ -1,0 +1,33 @@
+.container-fluid{
+    width: 50%;
+    height: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px;
+    margin-top:30px;
+    padding:20px;
+   background-color: (#e0dce7);
+}
+@media screen and (max-width:767) {
+  .container-fluid{
+    width:100%;
+  }
+}
+
+
+.alert {
+    color: red;
+    font-size: 15px;
+    text-align: left;
+   
+  }
+  .validation-star{
+    color: red;
+  }
+  .head{
+   text-align: center;
+    margin-top: 20px;
+    color: red;
+   
+  }

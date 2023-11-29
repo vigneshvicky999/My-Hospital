@@ -1,0 +1,84 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Edwin",
+      "specialist": "Cardiologist",
+      "email": "edwinscareers@gmail.com",
+      "check": ""
+    },
+    {
+      "id": 2,
+      "name": "Kumar",
+      "specialist": "Cardiologist",
+      "email": "kumar@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Purushoth",
+      "specialist": "Gasterologist",
+      "email": "purushoth@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Lakshmi",
+      "specialist": "Gyneocologist",
+      "email": "lakshmi@gmail.com",
+      "check": ""
+    },
+    {
+      "id": 5,
+      "name": "Venkat",
+      "specialist": "Oncologist",
+      "email": "venkat@gmail.com"
+    },
+    {
+      "id": "8",
+      "name": "Vicky Kumar",
+      "specialist": "Oncologist",
+      "email": "vk@gmail.com",
+      "check": ""
+    },
+    {
+      "id": "9",
+      "name": "Abinay",
+      "specialist": "Cardiologist",
+      "email": "abinay@gmail.com",
+      "check": ""
+    },
+    {
+      "id": "121",
+      "name": "Sanjai S",
+      "specialist": "Neurologist",
+      "email": "sanjai@gmail.com",
+      "check": ""
+    }
+  ],
+  "comments": [],
+  "profile": [
+    {
+      "id": 1,
+      "name": "Vignesh Kumar",
+      "userName": "vicky",
+      "dob": "1999-06-16",
+      "email": "vigneshkumar@gmail.com",
+      "password": "9944616833"
+    },
+    {
+      "id": 2,
+      "name_": "Sarang",
+      "userName": "sarang",
+      "dob": "2023-11-10",
+      "email_": "sarang@gmail.com",
+      "password": "1234567890"
+    },
+    {
+      "id": 3,
+      "name_": "Arun",
+      "userName": "arun",
+      "dob": "1997-09-15",
+      "email_": "arun@gmail.com",
+      "password": "arunarun123"
+    }
+  ]
+}

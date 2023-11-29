@@ -1,0 +1,76 @@
+<div class="container ">
+    <div class="specialist1 mt-3">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-5">
+                <h2><b>Doctors</b></h2>
+                <hr>
+                <img src="../../assets/Images/Thomas.jpg" class="doctor-image" alt="doctor"><br>
+                <h3 style="margin-left: 120px;"><b>Dr Thomas</b></h3>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-7 mt-2">
+                <h3 class="specialist12"><b>About Dr.Thomas</b></h3>
+                <p class="dr"> Dr.Thomas is the CEO of our hospital and he also a senior most brain surgeon of our
+                    hospital.
+                    Doctors meet and talk with patients and caregivers to diagnose, manage and treat illnesses and
+                    injuries.
+                    Of course, specific duties will vary depending on the area of medicine you intend to practice, but
+                    many
+                    of the core duties are required of all doctors. Some of those duties may include:</p>
+                <ul>
+                    <li>
+                        <p>Listening carefully to patients to gather information regarding symptoms</p>
+                    </li>
+                    <li>
+                        <p>Performing diagnostics to determine the root problem</p>
+                    </li>
+                    <li>
+                        <p>Reading and interpreting laboratory results</p>
+                    </li>
+                    <li>
+                        <p>Prescribing medication; administering treatments</p>
+                    </li>
+                    <li>
+                        <p>Working closely with physician assistants, nurses, EMTs, pharmacists and other health
+                            professionals to ensure the best possible care of their patients</p>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 
+         <div class="col-sm-12 col-md-4 col-lg-4 divide mt-2 p-4 mb-4" style="border: 1px solid black">
+                <div class="card-img">
+                    <img src="../../assets/Images/Venu.jpg" class="card2" alt="Card2">
+                </div>
+                <div class="card-body">
+                    <h3><b>Dr.Venu</b></h3>
+                </div>
+                <div class="card-content">
+                    <p>Dr.Venu is an Eye specialist and he is the well trained professional of our hospital with 6
+                        years of experiences</p>
+                </div>
+                <div class="clickable">
+                    <button  (click)="data('venu')"class="btn btn-primary ">Click to view bio</button>
+                </div>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp; --> 
+<!-- </div>
+    </div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-4 card  mt-2 p-4 mb-4  " style="width: 21rem ;border: 1px solid black;"
+            *ngFor="let item of setData | paginate : {itemsPerPage:6, currentPage:pages}">
+            <img src={{item.url}} class="card2" style="margin: auto;" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><b>{{item.name}}</b></h5>
+                <p class="card-content" style="text-align: left;">{{item.description}}</p>
+                <button (click)="data(item.id)" class="btn btn-primary">Click to view bio</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<pagination-controls (pageChange)=" pages  = $event" ></pagination-controls>

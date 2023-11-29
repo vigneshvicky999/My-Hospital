@@ -1,0 +1,84 @@
+.bannerForSpeciality .specialityImage {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    position: relative;
+}
+
+.bannerForSpeciality p {
+    position: relative;
+    margin-bottom: auto;
+    font-size: 12px;
+}
+
+.bannerForSpeciality h2 {
+    position: relative;
+    margin-bottom: auto;
+
+}
+
+.bannerForSpeciality img {
+    width: 40px;
+    height: 40px;
+}
+
+.Banner-content {
+    margin-top: -320px;
+}
+
+hr {
+    width: 70%;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.container .card {
+    margin: 20px;
+    border: 1px solid black;
+}
+
+.container img:hover {
+    box-shadow: none;
+}
+
+.card2 {
+    width: 160px;
+    height: 160px;
+
+
+}
+
+.card-img {
+    text-align: center;
+}
+
+.clickable {
+    text-align: center;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card :hover {
+    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+}
+
+.card-body :hover {
+    box-shadow: none;
+}
+
+.card {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.dr::first-letter {
+    font-size: x-large;
+}

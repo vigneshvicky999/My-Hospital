@@ -1,0 +1,17 @@
+.hospital-image{
+    width: 350px;
+    height: 350px ;
+    object-fit: contain;
+}
+.bottom{
+    text-align: center;
+    
+}
+@media screen  and (max-width: 767px)  {
+    .image{
+        margin-left: -100px;
+        width: 350px;
+    height: 350px ;
+        
+    }
+}

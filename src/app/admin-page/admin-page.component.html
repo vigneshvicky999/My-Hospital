@@ -1,0 +1,63 @@
+<div class="container-fluid mt-2 ">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="head">Doctor's List <input class="form-control mb-2" type="search" placeholder="Enter the specialist" [(ngModel)]="filterText" aria-label="Search"
+        style="width: 250px;float: right;"></h2>
+     
+    </div>
+    <div class="col-md-3">
+      <div class="card" style="width: 18rem;">
+        <form [formGroup]="addForm">
+          <div class="form-floating mt-4">
+            <input type="text" class="form-control" formControlName="id" id="floatingInput"
+              oninput="this.value = this.value.replace(/[^0-9,-]/g, '')" maxlength="10" placeholder="Id">
+            <label for="floatingInput">Id</label>
+          </div>
+          <div class="form-floating mt-4">
+            <input type="text" class="form-control" formControlName="name" id="fname" placeholder="Name">
+            <label for="floatingInput"> Name</label>
+          </div>&nbsp;
+          <div class="form-floating">
+            <input type="text" class="form-control" formControlName="specialist" id="floatingInput"
+              placeholder="Specialist">
+            <label for="floatingInput">Specialist</label>
+          </div>&nbsp;
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" formControlName="email" id="floatingInput"
+              placeholder="name@example.com">
+            <label for="floatingEmail">Email</label>
+          </div>&nbsp;
+          <div class="button mb-3">
+            <button class="btn btn-success" type="submit" *ngIf="showAddBtn" (click)="postData()">Add</button>&nbsp;
+            <button class="btn btn-warning" *ngIf="showUpdateBtn" (click)="putData(this.employee)">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-9">
+      <table class="table">
+        <thead >
+          <tr>
+            <th scope="col">SI.No</th>
+            <th scope="col">Doctor Id</th>
+            <th scope="col" ><i (click)="sort('name')"  class="bi bi-sort-up" ></i> Doctor Name</th>
+            <th scope="col"> <i (click)="sort('name')"  class="bi bi-sort-up"></i> Specialist </th>
+            <th scope="col"><i (click)="sort('name')"  class="bi bi-sort-up"></i>  Email</th>
+            <th scope="col">Action</th>
+          </tr>
+          <tr *ngFor="let emp of filteredEmployee  ,let i=index ">
+            <td scope="col">{{i+1}}</td>
+            <td scope="col">{{emp.id}}</td>
+            <td scope="col">{{emp.name}}</td>
+            <td scope="col">{{emp.specialist}}</td>
+            <td scope="col">{{emp.email}}</td>
+            <td><button (click)="onEdit(emp)" class="btn btn-warning ">Edit</button>&nbsp;
+              <button (click)="deleteData(emp.id)" class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
