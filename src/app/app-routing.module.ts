@@ -16,6 +16,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { authGuard } from './guard/auth.guard';
 import { AvailSpecialitiesComponent } from './avail-specialities/avail-specialities.component';
+import { TermsAndConditionComponent } from './terms-and-condition/terms-and-condition.component';
 
 const routes: Routes = [
   {
@@ -81,6 +82,10 @@ const routes: Routes = [
   {
     path: 'avail-speciality/:specialitiesValue',
     component: AvailSpecialitiesComponent, canActivate: [authGuard]
+  },
+  {
+    path: 'terms&condition',
+    component: TermsAndConditionComponent, canActivate: [authGuard]
   }
 ];
 

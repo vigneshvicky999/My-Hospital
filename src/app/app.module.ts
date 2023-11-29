@@ -19,6 +19,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { SpecialitiesComponent } from './specialities/specialities.component';
 import { AvailSpecialitiesComponent } from './avail-specialities/avail-specialities.component';
+import { TermsAndConditionComponent } from './terms-and-condition/terms-and-condition.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { AvailSpecialitiesComponent } from './avail-specialities/avail-specialit
     RegisterComponent,
     LoginComponent,
     SpecialitiesComponent,
-    AvailSpecialitiesComponent
+    AvailSpecialitiesComponent,
+    TermsAndConditionComponent
   ],
   imports: [
     BrowserModule,
