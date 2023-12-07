@@ -18,6 +18,7 @@ import { authGuard } from './guard/auth.guard';
 import { AvailSpecialitiesComponent } from './avail-specialities/avail-specialities.component';
 import { TermsAndConditionComponent } from './terms-and-condition/terms-and-condition.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { FAQComponent } from './faq/faq.component';
 
 const routes: Routes = [
   {
@@ -91,6 +92,10 @@ const routes: Routes = [
   {
     path: 'privacy-policy',
     component: PrivacyPolicyComponent, canActivate: [authGuard]
+  },
+  {
+    path: 'faq',
+    component: FAQComponent, canActivate: [authGuard]
   }
 ];
 

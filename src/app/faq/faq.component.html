@@ -1,0 +1,91 @@
+<h2>General Questions</h2>
+<div class="row">
+<div class="col-6">   
+<p><strong>Q1:</strong> What services does Modern Health-Care Centre provide? </p>
+<p *ngIf="showAnswer1"><strong>A1:</strong> Modern Health-Care Centre offers a range of medical services including
+    [list key services such as emergency care, surgical procedures, diagnostic services, etc.].</p>
+</div>
+<div class="col-5 " >
+<a><i class="bi bi-plus-lg " (click)="toggleAnswer(1)" style="margin: -20px;"></i></a>
+</div>
+<div class="col-6"> 
+<p><strong>Q2:</strong> How do I schedule an appointment? </p>
+<p *ngIf="showAnswer2"><strong>A2:</strong> You can schedule an appointment by [provide instructions, e.g., calling
+    ourappointment hotline, using our online booking system, or visiting our reception].</p>
+</div>
+<div class="col-5">
+    <a><i class="bi bi-plus-lg " (click)="toggleAnswer(2)"style="margin: -20px;"></i></a>
+</div>
+<div class="col-6">
+<p><strong>Q3:</strong> What are the visiting hours? </p>
+<p *ngIf="showAnswer3"><strong>A3:</strong> Visiting hours are [insert visiting hours here]. Exceptions may apply in
+    certain cases, so please check with the nursing staff. </p>
+</div>
+<div class="col-5 ">
+    <i class="bi bi-plus-lg " (click)="toggleAnswer(3)"></i>
+</div>
+<h2>Billing and Insurance</h2>
+<div class="col-6">
+<p><strong>Q4:</strong> How can I pay my medical bills? </p>
+<p *ngIf="showAnswer4"><strong>A4:</strong> You can pay your medical bills [provide payment options, e.g., online,
+    in-person at the billing office, or via mail]. We accept [list accepted payment methods].</p>
+</div>
+<div class="col-5 ">
+    <i class="bi bi-plus-lg " (click)="toggleAnswer(4)"></i>
+</div>
+<div class="col-6">
+<p><strong>Q5:</strong> Does Modern Health-Care Centre accept insurance?</p>
+<p *ngIf="showAnswer5"><strong>A5:</strong> Yes, we accept a variety of insurance plans. Please check with our billing
+    department or your insurance provider for specific details.</p>
+</div>
+<div class="col-5">
+    <i class="bi bi-plus-lg "
+    (click)="toggleAnswer(5)"></i>
+</div>
+<h2>Patient Care</h2>
+<div class="col-6">
+<p><strong>Q6:</strong> How can I access my medical records?</p>
+<p *ngIf="showAnswer6"><strong>A6:</strong> Patients can access their medical records by [provide instructions, e.g.,
+    logging into our patient portal or contacting our medical records department].</p>
+</div>
+<div class="col-5">
+    <i class="bi bi-plus-lg " (click)="toggleAnswer(6)"></i>
+</div>
+<div class="col-6">
+<p><strong>Q7:</strong> What should I do in case of a medical emergency? </p>
+<p *ngIf="showAnswer7"><strong>A7:</strong> In case of a medical emergency, please call [emergency number] immediately.
+    For non-emergency medical concerns, contact our [hospital hotline or advice line].</p>
+</div>
+<div class="col-5">
+    <i class="bi bi-plus-lg "
+        (click)="toggleAnswer(7)"></i>
+</div>
+<h2>COVID-19 Information</h2>
+<div class="col-6">
+<p><strong>Q8:</strong> What safety measures are in place for COVID-19? </p>
+<p *ngIf="showAnswer8"><strong>A8:</strong> Modern Health-Care Centre has implemented strict safety measures to protect
+    patients and staff from COVID-19. These include [list safety measures such as mask requirements, temperature checks,
+    and sanitation protocols].</p>
+</div>
+<div class="col-5">
+    <i class="bi bi-plus-lg "
+        (click)="toggleAnswer(8)"></i>
+</div>
+<div class="col-6">
+<p><strong>Q9:</strong> Can I get a COVID-19 test at Modern Health-Care Centre?</p>
+<p *ngIf="showAnswer9"><strong>A9:</strong> Yes, we offer COVID-19 testing. Please [provide information on how to
+    schedule a test, testing locations, and any specific requirements].</p>
+</div>
+<div class="col-5">
+    <i class="bi bi-plus-lg " (click)="toggleAnswer(9)"></i>
+</div>
+<h2>Additional Support</h2>
+<div class="col-6">
+<p><strong>Q10:</strong> How can I contact patient relations or customer support?</p>
+<p *ngIf="showAnswer10"><strong>A10:</strong> You can contact our patient relations or customer support team by [provide
+    contact details, e.g., phone number or email].</p>
+</div>
+<div class="col-5">
+    <i class="bi bi-plus-lg " (click)="toggleAnswer(10)"></i>
+</div>
+</div>

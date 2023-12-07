@@ -21,6 +21,7 @@ import { SpecialitiesComponent } from './specialities/specialities.component';
 import { AvailSpecialitiesComponent } from './avail-specialities/avail-specialities.component';
 import { TermsAndConditionComponent } from './terms-and-condition/terms-and-condition.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { FAQComponent } from './faq/faq.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     SpecialitiesComponent,
     AvailSpecialitiesComponent,
     TermsAndConditionComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    FAQComponent
   ],
   imports: [
     BrowserModule,

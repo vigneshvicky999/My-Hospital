@@ -18,7 +18,7 @@ export class FooterComponent implements DoCheck{
     }else{
    this.isFooterRequired=false
     }
-    
+  
    
      }
 }
