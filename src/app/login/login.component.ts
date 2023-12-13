@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+load: boolean=false;
 
 
   constructor(private authentication: AuthService, private builder: FormBuilder, private route: Router) { 
@@ -28,31 +29,34 @@ export class LoginComponent implements OnInit {
   }
 
   onLoginSubmitForm() {
-    
-    this.submit = true;
-    const userName = this.loginForm.value.userName;
-    const password = this.loginForm.value.password;
-  
-  
-    this.authentication.login(userName,password).subscribe((res: any) => {
-      if (Array.isArray(res)) {
-        const user = res.find((data: { userName: any; password: any }) => {
-          return data.userName === userName && data.password === password;
-        });
-  
-        if (user) {
-          sessionStorage.setItem('userName', JSON.stringify(user.id));
-          this.route.navigate(['/home']);
-        } else {
-          alert('Invalid Credentials');
-        }
-      } else {
-        console.error('API response is not an array');
+    setTimeout(()=>{
+      this.load=true
+      this.submit = true;
+      const userName = this.loginForm.value.userName;
+      const password = this.loginForm.value.password;
       
-      }
-    });
-  }
-  
+      
+      this.authentication.login(userName,password).subscribe((res: any) => {
+        if (Array.isArray(res)) {
+          const user = res.find((data: { userName: any; password: any }) => {
+            return data.userName === userName && data.password === password;
+          });
+    
+          if (user) {
+            sessionStorage.setItem('userName', JSON.stringify(user.id));
+            this.route.navigate(['/home']);
+          } else {
+            alert('Invalid Credentials');
+          }
+        } else {
+          console.error('API response is not an array');
+        
+        }
+      });
+    },5000);
+    
+    }
+   
   
   }
 

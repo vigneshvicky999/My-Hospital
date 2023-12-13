@@ -14,17 +14,13 @@ toggleMenu(){
 this.isMenuOpen = !this.isMenuOpen
 }
 
-
 ngDoCheck(): void {
  let currentUrl=this.router.url;
-//  console.log(currentUrl)
  if(currentUrl =='/' || currentUrl =='/register')   {
   this.isNavbarRequired=true
  }else{
 this.isNavbarRequired=false
  }
- 
-
   }
 
 }

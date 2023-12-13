@@ -1,0 +1,133 @@
+<div class="container-fluid mt-2 ">
+  <nav class="navbar bg-body-tertiary">
+    <div class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+
+      <a class="nav-link active" routerLink="/admin" aria-current="page" href="#">Back</a>
+
+    </div>
+    <div class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Enter the patient name" aria-label="Search">
+    </div>
+  </nav>
+</div>
+<div class="container">
+  <h3 class="text-center">Patient's Details List</h3>
+  <table class="table">
+    <thead>
+      <h4 class="bg bg-secondary">PATIENT DETAILS</h4>
+      <tr>
+        <td class="col">
+          <form  [formGroup]="patientDetails" class="row g-3">
+            <div class="col-6">
+              <label for="inputName1" class="form-label">First Name</label>
+              <input type="text" class="form-control" formControlName="fname" placeholder="First name" aria-label="First name">
+            </div>
+            <div class="col-6">
+              <label for="inputName2" class="form-label">Last Name</label>
+              <input type="text" class="form-control" formControlName="lname" placeholder="Last name" aria-label="Last name">
+            </div>
+            <div class="col-6">
+              <label for="inputName1" class="form-label">Preferred Name</label>
+              <input type="text" class="form-control" formControlName="pname" placeholder="Preferred name" aria-label="Preferred name">
+            </div>
+            <div class="col-6">
+              <label for="inputName1" class="form-label">Token Id</label>
+              <input type="text" class="form-control" formControlName="pname" placeholder="Admission Id" aria-label="Admission Id">
+            </div>
+            <div class="col-6">
+              <label for="inputName2" class="form-label">Date of Birth</label>
+              <input type="date" class="form-control" formControlName="dob"  aria-label="Date of Birth">
+            </div>
+            <div class="col-6">
+              <label for="gender">Gender</label><br>
+              <div class="mt-2">
+              <input type="radio" class="btn-check" formControlName="checked" value="male" id="option5" autocomplete="off" checked>
+              <label class="btn" for="option5">Male </label>      
+              <input type="radio" class="btn-check" formControlName="checked" value="female" id="option6" autocomplete="off">
+              <label class="btn" for="option6">Female</label>
+              <input type="radio" class="btn-check" formControlName="checked" value="other" id="option7" autocomplete="off">
+              <label class="btn" for="option7">other</label>
+          </div>
+        </div>
+        <div class="col-6">
+        <label>Upload your photo</label>
+        <div class="input-group mb-3">
+          <input type="file" class="form-control" id="inputGroupFile02">
+          <label class="input-group-text" for="inputGroupFile02">Upload</label>
+        </div>
+      </div>
+      <div class="col-6">
+            <label for="lang">Is English is the second Language?</label>&nbsp;
+            <div class="form-check form-check-inline mt-2"><br>
+              <input class="form-check-input" type="radio" formControlName="lang"  id="inlineRadio1" value="English">
+              <label class="form-check-label" for="inlineRadio1">Yes</label>
+            </div>
+           
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" formControlName="lang"  id="inlineRadio2" value="English-not Known">
+              <label class="form-check-label" for="inlineRadio2">No</label>
+            </div>
+          </div>
+            <h4 class="bg bg-secondary">PATIENT CONTACT DETAILS</h4>
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="email" formControlName="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+              <label for="text" class="form-label">Phone Number</label>
+              <input type="text" formControlName="phone" class="form-control" id="inputText11">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Address</label>
+              <input type="text" formControlName="address1" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Address 2</label>
+              <input type="text" class="form-control" formControlName="address2" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" class="form-control" formControlName="city" id="inputCity">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">State</label>
+              <select id="inputState" formControlName="state" class="form-select">
+                <option selected>Choose...</option>
+                <option value="TamilNadu">TamilNadu</option>
+                <option value="Kerala">Kerala</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Zip</label>
+              <input type="text" formControlName="zip" class="form-control" id="inputZip">
+            </div>
+            <h4 class="bg bg-secondary">PATIENT MEDICAL ISSUES</h4>
+            <div class="col-md-6">
+              <label for="inputname1" class="form-label">Admission Date</label>
+              <input type="text" formControlName="dateofAdmission" class="form-control" id="inputDate">
+            </div>
+            <div class="col-md-6">
+              <label for="inputname1" class="form-label">Active Status</label>
+              <select id="inputState" formControlName="activeStatus" class="form-select">
+                <option value="" disabled selected>Choose...</option>
+                <option value="Active">Active</option>
+                <option value="In active">In Active</option>
+              </select>
+              </div>
+            <div class="col-md-6">
+              <label for="inputname1" class="form-label">Patient cause for admission</label>
+              <input type="text" formControlName="causeForAdmission" placeholder="Eg:Fever" class="form-control" id="inputcause">
+            </div>
+            <div class="col-md-6">
+              <label for="inputname1" class="form-label">Who deals the patient?</label>
+              <input type="text" formControlName="doctorDeals" placeholder="Doctor's Name" class="form-control" id="inputdeal">
+            </div>
+            <div class="col-12">
+              <button type="submit" (click)="postPatientDetails(patientDataStorage)" class="btn btn-primary">Add</button>
+            </div>
+          </form>
+        </td>
+      </tr>
+    </thead>
+  </table>
+</div>

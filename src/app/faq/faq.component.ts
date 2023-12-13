@@ -17,39 +17,6 @@ export class FAQComponent {
   showAnswer9: boolean = false
   showAnswer10: boolean = false
 
-  // we can use if condition or switch case
-  
-  //   toggleAnswer(questionNumber:number){
-  //     if(questionNumber===1){
-  //       this.showAnswer1 = !this.showAnswer1
-  //     }else if(questionNumber===2){
-  //     this.showAnswer2 = !this.showAnswer2
-  //   }
-  //   else if(questionNumber===3){
-  //     this.showAnswer3 = !this.showAnswer2
-  //   }
-  //   else if(questionNumber===4){
-  //     this.showAnswer4 = !this.showAnswer4
-  //   }
-  //   else if(questionNumber===5){
-  //     this.showAnswer5 = !this.showAnswer5
-  //   }
-  //   else if(questionNumber===6){
-  //     this.showAnswer6 = !this.showAnswer6
-  //   }
-  //   else if(questionNumber===7){
-  //     this.showAnswer7 = !this.showAnswer7
-  //   }
-  //   else if(questionNumber===8){
-  //     this.showAnswer8 = !this.showAnswer8
-  //   }
-  //   else if(questionNumber===9){
-  //     this.showAnswer9 = !this.showAnswer9
-  //   }
-  //   else if(questionNumber===10){
-  //     this.showAnswer10 = !this.showAnswer10
-  //   }
-  // }
   toggleAnswer(questionNumber: Number) {
     switch (questionNumber) {
       case 1:

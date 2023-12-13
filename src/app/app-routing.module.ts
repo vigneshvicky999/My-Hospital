@@ -19,6 +19,8 @@ import { AvailSpecialitiesComponent } from './avail-specialities/avail-specialit
 import { TermsAndConditionComponent } from './terms-and-condition/terms-and-condition.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { FAQComponent } from './faq/faq.component';
+import { PatientDetailsComponent } from './patient-details/patient-details.component';
+import { DoctorListComponent } from './doctor-list/doctor-list.component';
 
 const routes: Routes = [
   {
@@ -76,6 +78,14 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminPageComponent, canActivate: [authGuard]
+  },
+  {
+    path:'doctor-list',
+    component:DoctorListComponent, canActivate: [authGuard]
+  },
+  {
+    path:'patient',
+    component:PatientDetailsComponent, canActivate: [authGuard]
   },
   {
     path: 'avail-speciality/:id',

@@ -22,6 +22,9 @@ import { AvailSpecialitiesComponent } from './avail-specialities/avail-specialit
 import { TermsAndConditionComponent } from './terms-and-condition/terms-and-condition.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { FAQComponent } from './faq/faq.component';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { PatientDetailsComponent } from './patient-details/patient-details.component';
+import { DoctorListComponent } from './doctor-list/doctor-list.component';
 
 
 @NgModule({
@@ -43,7 +46,10 @@ import { FAQComponent } from './faq/faq.component';
     AvailSpecialitiesComponent,
     TermsAndConditionComponent,
     PrivacyPolicyComponent,
-    FAQComponent
+    FAQComponent,
+    SpinnerComponent,
+    PatientDetailsComponent,
+    DoctorListComponent
   ],
   imports: [
     BrowserModule,
